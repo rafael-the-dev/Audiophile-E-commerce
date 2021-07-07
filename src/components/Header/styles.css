@@ -1,0 +1,49 @@
+.header {
+    background-color: #000;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+}
+
+.header__link {
+    font-size: .8rem;
+    font-weight: 700;
+    padding: .4rem .9rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 501px) {
+    .header__navigation {
+        display: none;
+    }
+
+    .header__division-2 {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header__division-2 {
+        width: 14%;
+    }
+
+    .header__navigation {
+        display: flex;
+    }
+
+    .header__menu-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .header {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .header__link {
+        font-size: .85rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

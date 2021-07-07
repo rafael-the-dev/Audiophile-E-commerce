@@ -1,0 +1,33 @@
+.logo-container {
+    height: 24px;
+    width: 28%;
+}
+
+.logo--tablet {
+    display: none;
+    margin-left: 20px;
+}
+
+
+
+@media screen and (min-width: 501px) {
+    .logo-container {
+        height: 22px;
+        width: 70%;
+    }
+
+    .logo--tablet {
+        display: block;
+    }
+
+    .logo__header-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .logo-container {
+        height: 16px;
+        width: 100%;
+    }
+}

@@ -42,6 +42,10 @@
     display: none;
 }
 
+.fa-icon {
+    font-size: 1.2rem;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -100,8 +104,17 @@
     outline: none;
 }
 
+.px-5 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .uppercase {
     text-transform: uppercase;
+}
+
+.text-white {
+    color: #fff;
 }
 
 .width-100 {
