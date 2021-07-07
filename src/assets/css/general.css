@@ -34,12 +34,16 @@
     background-size: contain;
 }
 
-.cover {
+.bg-cover {
     background-size: cover;
 }
 
 .d-none {
     display: none;
+}
+
+.decoration-none {
+    text-decoration: none;
 }
 
 .fa-icon {
@@ -111,6 +115,10 @@
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .text-white {

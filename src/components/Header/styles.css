@@ -1,5 +1,9 @@
 .header {
-    background-color: #000;
+    background-color: #191919;
+}
+
+.header__division {
+    border-bottom: 1px solid #979797;
     padding-bottom: .8rem;
     padding-top: .8rem;
 }
