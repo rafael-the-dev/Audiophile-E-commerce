@@ -1,0 +1,43 @@
+@media screen and (min-width: 501px) {
+    .d-block-tablet {
+        display: block;
+    }
+
+    .d-flex-tablet {
+        display: flex;
+    }
+
+    .d-none-tablet {
+        display: none;
+    }
+
+    .judtify-between-tablet {
+        justify-content: space-between;
+    }
+
+    .judtify-center-tablet {
+        justify-content: center;
+    }
+
+    .judtify-start-tablet {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .align-start-desktop {
+        align-items: flex-start;
+    }
+
+    .px-tablet {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .px-desktop {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}

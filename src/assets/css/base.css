@@ -1,6 +1,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', sans-serif !important;
 }
 
