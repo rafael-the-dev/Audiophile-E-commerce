@@ -11,6 +11,10 @@
         display: none;
     }
 
+    .d-none-sm {
+        display: none;
+    }
+
     .judtify-between-tablet {
         justify-content: space-between;
     }
@@ -29,6 +33,14 @@
         align-items: flex-start;
     }
 
+    .d-flex-md {
+        display: flex;
+    }
+
+    .d-none-md {
+        display: none;
+    }
+
     .px-tablet {
         padding-left: 5%;
         padding-right: 5%;
@@ -36,7 +48,7 @@
 }
 
 @media screen and (min-width: 1220px) {
-    .px-desktop {
+    .px-lg {
         padding-left: 15%;
         padding-right: 15%;
     }

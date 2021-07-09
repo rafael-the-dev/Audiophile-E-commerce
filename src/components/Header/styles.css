@@ -16,10 +16,6 @@
 }
 
 @media screen and (min-width: 501px) {
-    .header__navigation {
-        display: none;
-    }
-
     .header__division-2 {
         width: 30%;
     }
@@ -29,22 +25,9 @@
     .header__division-2 {
         width: 14%;
     }
-
-    .header__navigation {
-        display: flex;
-    }
-
-    .header__menu-button {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 1220px) {
-    .header {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-
     .header__link {
         font-size: .85rem;
         padding-left: 1rem;
