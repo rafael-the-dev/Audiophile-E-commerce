@@ -8,7 +8,7 @@ const Header = () => {
             <div className="align-center flex justify-between width-100 header__division">
                 <div className="align-center flex justify-start header__division-2">
                     <button
-                        className="fa fa-bars fa-icon background-transparent border-none outline-none
+                        className="fa fas fa-bars fa-icon background-transparent border-none outline-none
                         text-white d-none-md header__menu-button"
                         aria-label="Menu button">
                     </button>
@@ -32,7 +32,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <button
-                    className="fa fa-shopping-cart fa-icon background-transparent border-none outline-none text-white"
+                    className="fa fas fa-shopping-cart fa-icon background-transparent border-none outline-none text-white"
                     aria-label="Menu button">
                 </button>
             </div>

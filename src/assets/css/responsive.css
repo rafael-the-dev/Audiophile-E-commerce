@@ -1,4 +1,17 @@
 @media screen and (min-width: 501px) {
+    .align-start-sm {
+        align-items: flex-start;
+    }
+
+    .align-center-sm {
+        align-items: center;
+    }
+
+    .align-stretch-sm {
+        align-items: stretch;
+    }
+
+
     .d-block-tablet {
         display: block;
     }
@@ -13,6 +26,22 @@
 
     .d-none-sm {
         display: none;
+    }
+
+    .flex-row-sm {
+        flex-direction: row;
+    }
+
+    .flex-wrap-sm {
+        flex-wrap: wrap;
+    }
+
+    .justify-center-sm {
+        justify-content: center;
+    }
+
+    .justify-between-sm {
+        justify-content: space-between;
     }
 
     .judtify-between-tablet {
@@ -39,6 +68,14 @@
 
     .d-none-md {
         display: none;
+    }
+
+    .flex-wrap-md {
+        flex-wrap: wrap;
+    }
+
+    .justify-between-md {
+        justify-content: space-between;
     }
 
     .px-tablet {

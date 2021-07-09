@@ -1,4 +1,8 @@
+import ProductCart from '../../components/Product-Cart';
 import SeeProductLink from '../../components/SeeProductLink';
+import headphones from '../../assets/images/shared/mobile/image-headphones.png';
+import speakers from '../../assets/images/shared/mobile/image-speakers.png';
+import earsphones from '../../assets/images/shared/mobile/image-earphones.png';
 import './styles.css';
 
 const Home = () => {
@@ -15,6 +19,12 @@ const Home = () => {
                     </p>
                     <SeeProductLink url="/" customClass="hero__link" />
                 </div>
+            </section>
+            <section className="flex flex-column px-5 width-100 align-stretch-sm flex-row-sm
+                justify-between-sm px-lg products-cards">
+                <ProductCart url="/" name="Headphones" image={headphones}/>
+                <ProductCart url="/" name="Speakers" image={speakers}/>
+                <ProductCart url="/" name="Earphones" image={earsphones}/>
             </section>
         </main>
     );
