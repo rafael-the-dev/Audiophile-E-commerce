@@ -41,10 +41,20 @@
     }
 
     .cart__image-container {
-        transform: translateY(-41px);
+        transform: translateY(-37px);
     }
 
     .cart__name, .cart__link{
         transform: translateY(-35px);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .cart__image-container {
+        transform: translateY(-50px);
+    }
+
+    .cart__name, .cart__link{
+        transform: translateY(-40px);
     }
 }
