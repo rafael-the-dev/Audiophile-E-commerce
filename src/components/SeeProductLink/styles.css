@@ -7,3 +7,15 @@
     margin-top: 33px;
     padding: .7rem 1rem;
 }
+
+.secondary {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+.others {
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+}

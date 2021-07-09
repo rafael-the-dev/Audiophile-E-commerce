@@ -20,6 +20,10 @@
         display: flex;
     }
 
+    .d-flex-sm {
+        display: flex;
+    }
+
     .d-none-tablet {
         display: none;
     }
