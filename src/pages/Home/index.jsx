@@ -7,6 +7,8 @@ import earphone from '../../assets/images/home/mobile/image-earphones-yx1.jpg';
 import bestGear from '../../assets/images/shared/mobile/image-best-gear.jpg'
 import './styles.css';
 import Card from '../../components/Card';
+import H1 from '../../components/H1';
+import H2 from '../../components/H2';
 import { useEffect, useRef } from 'react';
 
 const Home = () => {
@@ -39,7 +41,7 @@ const Home = () => {
                 align-start-desktop px-tablet px-lg width-100 hero">
                 <div className="align-center flex flex-column justify-center text-center text-white 
                     align-start-desktop width-100 px-5 hero__division">
-                    <h1 className="hero__title">XX99 Mark II<br/>HeadphoneS</h1>
+                    <H1 customClass="hero__title" text="XX99 Mark II"><br/>HeadphoneS</H1>
                     <p className="hero__description">
                         Experience natural, lifelike audio and exceptional build quality made 
                         for the passionate music enthusiast.
@@ -57,7 +59,7 @@ const Home = () => {
             <section className="px-5 px-lg">
                 <div className="align-start flex justify-center flex-column bg-center no-repeat
                     bg-cover width-100 px-5 speaker-section">
-                    <h2 className="speaker-section__title">ZX7 SPEAKER</h2>
+                    <H2 customClass="speaker-section__title" text="ZX7 SPEAKER" />
                     <SeeProductLink url="/" customClass="text-black secondary" />
                 </div>
             </section>
@@ -74,7 +76,7 @@ const Home = () => {
                 </figure>
                 <div className="align-start flex justify-center flex-column 
                     width-100 px-5 earphones-section__content">
-                    <h2 className="earphones-section__content-title">YX1 EARPHONES</h2>
+                    <H2 customClass="earphones-section__content-title" text="YX1 EARPHONES" />
                     <SeeProductLink url="/" customClass="others" />
                 </div>
             </section>
@@ -90,11 +92,13 @@ const Home = () => {
                     />
                 </figure>
                 <div className="text-center px-5 best-gear__content">
-                    <h2 className="uppercase best-gear__content-title">
-                        Bringing you the
-                        <em className="best-gear__content-title--highlight">best</em>
+                    <H2
+                        customClass="uppercase best-gear__content-title"
+                        text="Bringing you the"
+                    >
+                        <em className='best-gear__content-title--highlight'>best</em>
                         audio gear
-                    </h2>
+                    </H2>
                     <p className="best-gear__content-description">
                         Located at the heart of New York City, Audiophile is the premier store for 
                         high end headphones, earphones, speakers, and audio accessories. We have a 
