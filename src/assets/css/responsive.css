@@ -74,6 +74,10 @@
         display: none;
     }
 
+    .flex-row-md {
+        flex-direction: row;
+    }
+
     .flex-wrap-md {
         flex-wrap: wrap;
     }

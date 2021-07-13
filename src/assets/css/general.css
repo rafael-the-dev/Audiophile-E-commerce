@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.absolute {
+    position: absolute;
+}
+
 .align-start {
     align-items: flex-start;
 }
@@ -36,6 +40,10 @@
 
 .bg-cover {
     background-size: cover;
+}
+
+.d-block {
+    display: block;
 }
 
 .d-none {
@@ -113,6 +121,10 @@
     padding-right: 5%;
 }
 
+.relative {
+    position: relative;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -130,5 +142,9 @@
 }
 
 .width-100 {
+    width: 100%;
+}
+
+.w-100 {
     width: 100%;
 }

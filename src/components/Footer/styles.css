@@ -1,0 +1,155 @@
+.footer {
+    background-color: #101010;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+}
+
+.footer__bar {    
+    background: #D87D4A;
+    height: 4px;
+    left: auto;
+    top: 0;
+    right: auto;
+    width: 29%;
+}
+
+.footer__navigation {
+    padding-top: 2rem;
+}
+
+.footer__link {
+    font-size: .95rem;
+    font-weight: 700;
+    opacity: .93;
+    padding: .4rem .9rem;
+    text-decoration: none;
+}
+
+.footer__description {
+    font-size: 1.06rem;
+    line-height: 1.7rem;
+    margin-top: 2rem;
+    opacity: .5;
+}
+
+.footer__division {
+    padding-top: 3rem;
+}
+
+.footer__copyright {
+    font-size: .95rem;
+    opacity: .7;
+    text-transform: capitalize;
+}
+
+.footer__social-media {
+    margin-top: 3rem;
+}
+
+.footer__social-media-link {
+    margin-right: 10px;
+}
+
+.footer__social-media-link:last-child {
+    margin-right: 0;
+}
+
+.footer__icon {
+    height: 25px;
+    width: 30px;
+}
+
+.footer__icon--facebook {
+    background-image: url('../../assets/images/icon-facebook.svg');
+}
+
+.footer__icon--twitter {
+    background-image: url('../../assets/images/icon-twitter.svg');
+}
+
+.footer__icon--instagram {
+    background-image: url('../../assets/images/icon-instagram.svg');
+}
+
+@media screen and (min-width: 501px) {
+    .footer__bar {
+        left: 5%;
+        width: 11%;
+    }
+
+    .footer__logo {
+        height: 16px;
+        width: 23%;
+    }
+
+    .footer__link:first-child {
+        padding-left: 0;
+    }
+
+    .footer__description {
+        font-size: .95rem;
+        text-align: left;
+    }
+
+    .footer__social-media {
+        margin-top: 0;
+    }
+
+    .footer__copyright {
+        font-size: .85rem;
+    }
+}
+
+@media screen and (min-width: 673px) {
+    .footer__logo {
+        height: 19px;
+        width: 22%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .footer__navigation {
+        padding-top: 0;
+    }
+
+    .footer__logo {
+        height: 19px;
+        width: 13%;
+    }
+
+    .footer__description {
+        font-size: .8rem;
+        width: 50%;
+    }
+
+    .footer__division {
+        align-items: flex-end;
+        margin-top: 1rem;
+        min-height: 58px;
+        padding-top: 0;
+    }
+
+    .footer__social-media {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .footer__bar {
+        left: 5%;
+        width: 7%;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .footer__bar {
+        left: 15%;
+        width: 7%;
+    }
+
+    .footer__link {
+        font-size: .85rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
