@@ -26,6 +26,10 @@
     border: none;
 }
 
+.radius-default {
+    border-radius: 7px;
+}
+
 .block {
     display: block;
 }
