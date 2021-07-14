@@ -66,6 +66,10 @@
         align-items: flex-start;
     }
 
+    .align-start-md {
+        align-items: flex-start;
+    }
+
     .d-flex-md {
         display: flex;
     }
@@ -84,6 +88,10 @@
 
     .justify-between-md {
         justify-content: space-between;
+    }
+
+    .text-left-md {
+        text-align: left;
     }
 
     .px-tablet {

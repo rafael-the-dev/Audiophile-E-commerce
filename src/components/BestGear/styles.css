@@ -16,7 +16,7 @@
 }
 
 .best-gear__content-title--highlight {
-    color: #D87D4A;
+    color: var(--orange);
     margin-left: 7px;
     margin-right: 7px;
 }

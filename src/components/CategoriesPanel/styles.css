@@ -1,0 +1,17 @@
+.categories-panel {
+    background-color: #000;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.categories-panel__title {
+    font-size: 1.4rem;
+    opacity: .9;
+}
+
+@media screen and (min-width: 501px) {
+    .categories-panel {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+}
