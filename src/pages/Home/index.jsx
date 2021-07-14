@@ -1,34 +1,27 @@
-import ProductCart from '../../components/Product-Cart';
 import SeeProductLink from '../../components/SeeProductLink';
-import headphones from '../../assets/images/shared/mobile/image-headphones.png';
-import speakers from '../../assets/images/shared/mobile/image-speakers.png';
-import earsphones from '../../assets/images/shared/mobile/image-earphones.png';
 import earphone from '../../assets/images/home/mobile/image-earphones-yx1.jpg';
-import bestGear from '../../assets/images/shared/mobile/image-best-gear.jpg';
 import zx9Speaker from '../../assets/images/home/mobile/image-speaker-zx9.png';
 import './styles.css';
 import H1 from '../../components/H1';
 import H2 from '../../components/H2';
 import { useEffect, useRef } from 'react';
 import Footer from '../../components/Footer';
+import ProductsList from '../../components/ProductsList';
+import BestGear from '../../components/BestGear';
 
 const Home = () => {
     const earphoneRef = useRef(null);
-    const bestGearRef = useRef(null);
     const zx9SpeakerRef = useRef(null);
 
     const setImage = width => {
         if(width >= 992) {
             earphoneRef.current.src = require('../../assets/images/home/desktop/image-earphones-yx1.jpg').default;
-            bestGearRef.current.src = require('../../assets/images/shared/desktop/image-best-gear.jpg').default;
             zx9SpeakerRef.current.src = require('../../assets/images/home/desktop/image-speaker-zx9.png').default;
         } else if(width >= 501) {
             earphoneRef.current.src =  require('../../assets/images/home/tablet/image-earphones-yx1.jpg').default;
-            bestGearRef.current.src = require('../../assets/images/shared/tablet/image-best-gear.jpg').default;
             zx9SpeakerRef.current.src = require('../../assets/images/home/tablet/image-speaker-zx9.png').default;
         } else {
             earphoneRef.current.src =  require('../../assets/images/home/mobile/image-earphones-yx1.jpg').default;
-            bestGearRef.current.src = require('../../assets/images/shared/mobile/image-best-gear.jpg').default;
             zx9SpeakerRef.current.src = require('../../assets/images/home/mobile/image-speaker-zx9.png').default;
         }
     }
@@ -55,13 +48,7 @@ const Home = () => {
                         <SeeProductLink url="/" customClass="hero__link" />
                     </div>
                 </section>
-                <section className="flex flex-column px-5 width-100 align-stretch-sm flex-row-sm
-                    justify-between-sm px-lg products-cards">
-                    <ProductCart url="/" name="Headphones" image={headphones}/>
-                    <ProductCart url="/" name="Speakers" image={speakers}/>
-                    <ProductCart url="/" name="Earphones" image={earsphones}/>
-                </section>
-
+                <ProductsList />
                 <section className="px-5 px-lg">
                     <div className="align-center flex flex-column justify-between px-5 w-100
                         radius-default product-section">
@@ -84,7 +71,6 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                
                 <section className="px-5 px-lg">
                     <div className="align-start flex justify-center flex-column bg-center no-repeat
                         bg-cover w-100 px-5 radius-default speaker-section">
@@ -92,7 +78,6 @@ const Home = () => {
                         <SeeProductLink url="/" customClass="text-black secondary" />
                     </div>
                 </section>
-
                 <section className="px-5 px-lg align-stretch-sm d-flex-sm flex-row-sm justify-center-sm
                     earphones-section">
                     <figure className="w-100 radius-default earphones-section__image-container">
@@ -109,35 +94,7 @@ const Home = () => {
                         <SeeProductLink url="/" customClass="others" />
                     </div>
                 </section>
-
-                <section className="align-center flex flex-column px-5 width-100 px-lg justify-between-md 
-                    align-stretch-md best-gear">
-                    <figure className="w-100 radius-default best-gear__image-container">
-                        <img
-                            ref={bestGearRef}
-                            src={bestGear}
-                            alt=""
-                            className="d-block radius-default height-100 width-100"
-                        />
-                    </figure>
-                    <div className="text-center px-5 best-gear__content">
-                        <H2
-                            customClass="uppercase best-gear__content-title"
-                            text="Bringing you the"
-                        >
-                            <em className='best-gear__content-title--highlight'>best</em>
-                            audio gear
-                        </H2>
-                        <p className="best-gear__content-description">
-                            Located at the heart of New York City, Audiophile is the premier store for 
-                            high end headphones, earphones, speakers, and audio accessories. We have a 
-                            large showroom and luxury demonstration rooms available for you to browse and 
-                            experience a wide range of our products. Stop by our store to meet some of the 
-                            fantastic people who make Audiophile the best place to buy your portable audio 
-                            equipment.
-                        </p>
-                    </div>
-                </section>
+                <BestGear />
             </main>
             <Footer />
         </>

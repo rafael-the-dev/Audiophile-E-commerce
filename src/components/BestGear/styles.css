@@ -1,0 +1,43 @@
+.best-gear {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.best-gear__content {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.best-gear__content-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+}
+
+.best-gear__content-title--highlight {
+    color: #D87D4A;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.best-gear__content-description {
+    font-size: .98rem;
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    opacity: .8;
+}
+
+@media screen and (min-width: 992px) {  
+   .best-gear {
+        flex-direction: row-reverse;
+    }
+
+    .best-gear__content, .best-gear__image-container {
+        width: 48%;
+    }
+
+    .best-gear__image-container {
+        height: 530px;
+    }
+}
