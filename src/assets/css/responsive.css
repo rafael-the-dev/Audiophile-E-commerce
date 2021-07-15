@@ -78,6 +78,10 @@
         display: none;
     }
 
+    .flex-column-md {
+        flex-direction: column;
+    }
+
     .flex-row-md {
         flex-direction: row;
     }

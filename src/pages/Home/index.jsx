@@ -45,7 +45,7 @@ const Home = () => {
                             Experience natural, lifelike audio and exceptional build quality made 
                             for the passionate music enthusiast.
                         </p>
-                        <SeeProductLink url="/" customClass="hero__link" />
+                        <SeeProductLink url="./headphones/4" customClass="hero__link" />
                     </div>
                 </section>
                 <ProductsList />

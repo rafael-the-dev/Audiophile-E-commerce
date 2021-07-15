@@ -1,0 +1,39 @@
+.product-card {
+    margin-bottom: 2rem;
+}
+
+.product-card:last-child {
+    margin-bottom: 0;
+}
+
+.product-card__image-container {
+    height: 143px;
+}
+
+.product-card__name {
+    font-size: 1.15rem;
+    margin-top: 1.8rem;
+}
+
+.product-card__link {
+    margin-top: 21px;
+}
+
+@media screen and (min-width: 501px) {
+    .product-card {
+        margin-bottom: 0;
+        width: 31.5%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .product-card__image-container {
+        height: 199px;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .product-card__image-container {
+        height: 246px;
+    }
+}

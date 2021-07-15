@@ -1,0 +1,27 @@
+.gallery-image {
+    height: 200px;
+    margin-bottom: 1.2rem;
+}
+
+.gallery-image--third {
+    height: 350px;
+}
+
+@media screen and (min-width: 501px) {
+    .gallery-image {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .gallery-image--first {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .gallery-image--second {
+        grid-area: 2 / 1/ span 1 / span 1;
+    }
+
+    .gallery-image--third {
+        grid-area: 1 / 2/ span 2 / span 1;
+    }
+}

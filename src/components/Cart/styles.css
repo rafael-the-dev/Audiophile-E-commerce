@@ -30,6 +30,35 @@
     opacity: .8;
 }
 
+.cart__division {
+    margin-top: 1rem;
+}
+
+.cart__price {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cart__content-form {
+    margin-top: 1rem;
+}
+
+.cart__content-input {
+    background-color: #F1F1F1;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+    width: 29%;
+}
+
+.cart__add-button {
+    font-size: 1.02rem;
+    margin-left: 5%;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+}
+
 @media screen and (min-width: 501px) {
     .cart__image {
         height: 350px;

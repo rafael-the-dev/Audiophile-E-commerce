@@ -4,6 +4,7 @@ import SeeProductLink from "../SeeProductLink";
 import './styles.css';
 
 const Cart = ({ product, showForm }) => {
+    console.log(product)
     const imageRef = useRef(null);
 
     const getImage = url => {
@@ -29,11 +30,13 @@ const Cart = ({ product, showForm }) => {
             setImage(event.target.innerWidth);
         });
 
+        return () => window.onresize = null;
+
     }, [ setImage ]);
 
     return (
-        <article className="px-lg align-center flex flex-column justify-between w-100
-        radius-default cart">
+        <article className={`px-lg flex flex-column justify-between w-100
+            radius-default cart ${showForm ? 'align-start' : 'align-center'}`}>
             <figure className="w-100 radius-default cart__image">
                 <img
                     ref={imageRef}
@@ -61,16 +64,18 @@ const Cart = ({ product, showForm }) => {
                 }
                 {
                     showForm ? (
-                        <div className="">
-                            <h3 className="text-black">$ { product.price }</h3>
-                            <form className="align-center flex justify-start w-100 cart__content-form">
+                        <div className="cart__division">
+                            <h3 className="text-black cart__price">$ { product.price }</h3>
+                            <form className="align-stretch flex justify-start w-100 cart__content-form">
                                 <input
+                                    placeholder="1"
                                     type="number"
-                                    className="cart__content-input" 
+                                    className="cart__content-input text-center border-none outline-none" 
                                 />
                                 <button
                                     type="button" 
-                                    className="uppercase text-white bg-orange">
+                                    className="uppercase text-white bg-orange border-none outline-none
+                                    cart__add-button">
                                     Add to cart
                                 </button>
                             </form>
