@@ -3,6 +3,7 @@ import loadable from '@loadable/component';
 import Header from "../../components/Header";
 //import Categories from "../Categories";
 import Home from '../Home';
+import Product from "../Product";
 
 const App = () => {
     const loadableCategoriesComponent = loadable(() => import('../Categories'));

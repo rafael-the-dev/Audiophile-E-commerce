@@ -3,7 +3,7 @@ import H2 from "../H2";
 import SeeProductLink from "../SeeProductLink";
 import './styles.css';
 
-const Cart = ({ product }) => {
+const Cart = ({ product, showForm }) => {
     const imageRef = useRef(null);
 
     const getImage = url => {
@@ -51,10 +51,32 @@ const Cart = ({ product }) => {
                 <p className="text-black text-center cart__content-description">
                     { product.description }
                 </p>
-                <SeeProductLink
-                    url={ `./${product.category}/${product.id}`}
-                    customClass=""
-                />
+                {
+                    showForm ? '' : (
+                        <SeeProductLink
+                            url={ `./${product.category}/${product.id}`}
+                            customClass=""
+                        />
+                    )
+                }
+                {
+                    showForm ? (
+                        <div className="">
+                            <h3 className="text-black">$ { product.price }</h3>
+                            <form className="align-center flex justify-start w-100 cart__content-form">
+                                <input
+                                    type="number"
+                                    className="cart__content-input" 
+                                />
+                                <button
+                                    type="button" 
+                                    className="uppercase text-white bg-orange">
+                                    Add to cart
+                                </button>
+                            </form>
+                        </div>
+                    ) : ''
+                }
             </div>
         </article>
     );

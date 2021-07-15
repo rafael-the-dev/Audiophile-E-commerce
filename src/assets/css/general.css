@@ -34,6 +34,10 @@
     display: block;
 }
 
+.bg-orange {
+    background-color: var(--orange);
+}
+
 .bg-center {
     background-position: center;
 }
