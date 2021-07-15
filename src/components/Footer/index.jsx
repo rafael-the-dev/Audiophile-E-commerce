@@ -9,21 +9,29 @@ const Footer = () => {
             <div className="absolute footer__bar"></div>
             <div className="align-center flex flex-column justify-between w-100
                 align-start-sm flex-row-md">
-                <Logo customClass="footer__logo"/>
+                <Logo url="./#header" customClass="footer__logo"/>
                 <nav className="footer__navigation">
                     <ul className="align-center flex flex-column justify-between footer__list
                         flex-row-sm">
                         <li className="footer__item">
-                            <Link to="/" className="block uppercase text-white footer__link">Home</Link>
+                            <Link to="/" className="block uppercase text-white footer__link">
+                                Home
+                            </Link>
                         </li>
                         <li className="footer__item">
-                            <Link to="/" className="block uppercase text-white footer__link">Headphone</Link>
+                            <Link to="./headphones" className="block uppercase text-white footer__link">
+                                Headphones
+                            </Link>
                         </li>
                         <li className="footer__item">
-                            <Link to="/" className="block uppercase text-white footer__link">Speakers</Link>
+                            <Link to="./speakers" className="block uppercase text-white footer__link">
+                                Speakers
+                            </Link>
                         </li>
                         <li className="footer__item">
-                            <Link to="/" className="block uppercase text-white footer__link">Earphones</Link>
+                            <Link to="./earphones" className="block uppercase text-white footer__link">
+                                Earphones
+                            </Link>
                         </li>
                     </ul>
                 </nav>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header className="flex px-5 width-100 px-lg header">
+        <header id="header" className="flex px-5 width-100 px-lg header">
             <div className="align-center flex justify-between width-100 header__division">
                 <div className="align-center flex justify-start header__division-2">
                     <button
@@ -21,13 +21,19 @@ const Header = () => {
                             <Link to="/" className="block uppercase text-white header__link">Home</Link>
                         </li>
                         <li className="header__item">
-                            <Link to="/" className="block uppercase text-white header__link">Headphone</Link>
+                            <Link to="./headphones" className="block uppercase text-white header__link">
+                                Headphones
+                            </Link>
                         </li>
                         <li className="header__item">
-                            <Link to="/" className="block uppercase text-white header__link">Speakers</Link>
+                            <Link to="./speakers" className="block uppercase text-white header__link">
+                                Speakers
+                            </Link>
                         </li>
                         <li className="header__item">
-                            <Link to="/" className="block uppercase text-white header__link">Earphones</Link>
+                            <Link to="./earphones" className="block uppercase text-white header__link">
+                                Earphones
+                            </Link>
                         </li>
                     </ul>
                 </nav>

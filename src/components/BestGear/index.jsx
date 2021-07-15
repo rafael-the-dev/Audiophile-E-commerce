@@ -1,20 +1,26 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import H2 from '../H2';
 import './styles.css';
-import bestGear from '../../assets/images/shared/mobile/image-best-gear.jpg';
 
 const BestGear = () => {
     const bestGearRef = useRef(null);
 
-    const setImage = width => {
-        if(width >= 992) {
-            bestGearRef.current.src = require('../../assets/images/shared/desktop/image-best-gear.jpg').default;
-        } else if(width >= 501) {
-            bestGearRef.current.src = require('../../assets/images/shared/tablet/image-best-gear.jpg').default;
-        } else {
-            bestGearRef.current.src = require('../../assets/images/shared/mobile/image-best-gear.jpg').default;
-        }
+    const getImage = url => {
+        import('../../assets/images/' + url)
+            .then(image => bestGearRef.current.src = image.default)
+            .catch(console.log); 
     };
+
+    const setImage = useCallback(width => {
+        if(width >= 992) {
+            getImage('shared/desktop/image-best-gear.jpg');
+        } else if(width >= 501) {
+            getImage('shared/tablet/image-best-gear.jpg');
+        } else {
+            getImage('shared/mobile/image-best-gear.jpg');
+        }
+    }, []);
+
 
     useEffect(() => {
         setImage(window.innerWidth); 
@@ -22,7 +28,7 @@ const BestGear = () => {
         window.addEventListener('resize', event => {
             setImage(event.target.innerWidth);
         });
-    }, []);
+    }, [ setImage ]);
 
     return (
         <section className="align-center flex flex-column px-5 width-100 px-lg justify-between-md 
@@ -30,7 +36,7 @@ const BestGear = () => {
             <figure className="w-100 radius-default best-gear__image-container">
                 <img
                     ref={bestGearRef}
-                    src={bestGear}
+                    src=""
                     alt=""
                     className="d-block radius-default height-100 width-100"
                 />
