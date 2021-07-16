@@ -18,20 +18,20 @@ const Header = () => {
                 <nav className="d-none header__navigation d-flex-md">
                     <ul className="align-center flex justify-between header__list">
                         <li className="header__item">
-                            <Link to="/" className="block uppercase text-white header__link">Home</Link>
+                            <Link to="/" className="block uppercase text-white font-weight-7 header__link">Home</Link>
                         </li>
                         <li className="header__item">
-                            <Link to="./headphones" className="block uppercase text-white header__link">
+                            <Link to="./headphones" className="block uppercase text-white font-weight-7 header__link">
                                 Headphones
                             </Link>
                         </li>
                         <li className="header__item">
-                            <Link to="./speakers" className="block uppercase text-white header__link">
+                            <Link to="./speakers" className="block uppercase text-white font-weight-7 header__link">
                                 Speakers
                             </Link>
                         </li>
                         <li className="header__item">
-                            <Link to="./earphones" className="block uppercase text-white header__link">
+                            <Link to="./earphones" className="block uppercase text-white font-weight-7 header__link">
                                 Earphones
                             </Link>
                         </li>

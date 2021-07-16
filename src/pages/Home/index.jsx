@@ -40,8 +40,8 @@ const Home = () => {
                     align-start-desktop px-tablet px-lg width-100 hero">
                     <div className="align-center flex flex-column justify-center text-center text-white 
                         align-start-desktop width-100 px-5 hero__division">
-                        <H1 customClass="hero__title" text="XX99 Mark II"><br/>HeadphoneS</H1>
-                        <p className="hero__description">
+                        <H1 customClass="hero__title font-weight-7" text="XX99 Mark II"><br/>HeadphoneS</H1>
+                        <p className="opacity-7 hero__description">
                             Experience natural, lifelike audio and exceptional build quality made 
                             for the passionate music enthusiast.
                         </p>
@@ -51,7 +51,7 @@ const Home = () => {
                 <ProductsList />
                 <section className="px-5 px-lg">
                     <div className="align-center flex flex-column justify-between px-5 w-100
-                        radius-default product-section">
+                        radius-default py-2-5 bg-orange product-section">
                         <figure className="w-100 product-section__image-container">
                             <img
                                 ref={zx9SpeakerRef}
@@ -60,10 +60,10 @@ const Home = () => {
                                 className="d-block height-100 w-100"
                             />
                         </figure>
-                        <div className="align-center flex flex-column justify-between px-5 w-100
+                        <div className="align-center flex flex-column justify-between px-5 w-100 py-2-5
                             product-section__content">
                             <H2 customClass="text-white" text="ZX9 SPEAKER" />
-                            <p className="text-white text-center product-section__content-description">
+                            <p className="text-white text-center opacity-8 product-section__content-description">
                                 Upgrade to premium speakers that are phenomenally built to deliver truly 
                                 remarkable sound.
                             </p>
@@ -74,7 +74,7 @@ const Home = () => {
                 <section className="px-5 px-lg">
                     <div className="align-start flex justify-center flex-column bg-center no-repeat
                         bg-cover w-100 px-5 radius-default speaker-section">
-                        <H2 customClass="speaker-section__title" text="ZX7 SPEAKER" />
+                        <H2 customClass="speaker-section__title font-weight-7" text="ZX7 SPEAKER" />
                         <SeeProductLink url="/" customClass="text-black secondary" />
                     </div>
                 </section>
@@ -90,7 +90,7 @@ const Home = () => {
                     </figure>
                     <div className="align-start flex justify-center flex-column 
                         w-100 px-5 earphones-section__content">
-                        <H2 customClass="earphones-section__content-title" text="YX1 EARPHONES" />
+                        <H2 customClass="earphones-section__content-title font-weight-7" text="YX1 EARPHONES" />
                         <SeeProductLink url="/" customClass="others" />
                     </div>
                 </section>

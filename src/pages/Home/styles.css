@@ -5,7 +5,6 @@
 
 .hero__title {
     font-size: 2rem;
-    font-weight: 700;
     line-height: 2rem;
 }
 
@@ -25,15 +24,7 @@
     font-weight: 500;
     line-height: 1.5rem;
     margin-top: 1.5rem;
-    opacity: .7;
     padding: 0;
-}
-
-
-.product-section {
-    background-color: var(--orange);
-    padding-bottom: 2.5rem;
-    padding-top: 2.5rem;
 }
 
 .product-section__image-container {
@@ -49,7 +40,6 @@
     font-size: .95rem;
     line-height: 1.4rem;
     margin-top: 1.3rem;
-    opacity: .8;
 }
 
 .speaker-section {
@@ -60,7 +50,6 @@
 
 .speaker-section__title {
     font-size: 1.4rem;
-    font-weight: 700;
 }
 
 .earphones-section {
@@ -75,13 +64,10 @@
 
 .earphones-section__content {
     background-color: #F1F1F1;
-    padding-bottom: 2.5rem;
-    padding-top: 2.5rem;
 }
 
 .earphones-section__content-title {
     font-size: 1.4rem;
-    font-weight: 700;
 }
 
 

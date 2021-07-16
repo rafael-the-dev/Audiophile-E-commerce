@@ -129,6 +129,31 @@
     padding-right: 5%;
 }
 
+.py-1 {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.py-1-5 {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.py-2 {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.py-2-5 {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.py-3 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
 .relative {
     position: relative;
 }

@@ -19,7 +19,6 @@
 
 .footer__link {
     font-size: .95rem;
-    font-weight: 700;
     opacity: .93;
     padding: .4rem .9rem;
     text-decoration: none;
@@ -38,7 +37,6 @@
 
 .footer__copyright {
     font-size: .95rem;
-    opacity: .7;
     text-transform: capitalize;
 }
 

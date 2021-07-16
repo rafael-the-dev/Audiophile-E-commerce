@@ -35,7 +35,7 @@ const Cart = ({ product, showForm }) => {
     }, [ setImage ]);
 
     return (
-        <article className={`px-lg flex flex-column justify-between w-100
+        <article className={`px-lg py-2-5 flex flex-column justify-between w-100
             radius-default cart ${showForm ? 'align-start' : 'align-center'}`}>
             <figure className="w-100 radius-default cart__image">
                 <img
@@ -51,7 +51,7 @@ const Cart = ({ product, showForm }) => {
                     customClass={`cart__content-name text-black text-center ${ product.new ? 'cart--nwe-product' : ''}`}
                     text={ product.name }
                 />
-                <p className="text-black text-center cart__content-description">
+                <p className="text-black text-center opacity-8 cart__content-description">
                     { product.description }
                 </p>
                 {
@@ -65,12 +65,13 @@ const Cart = ({ product, showForm }) => {
                 {
                     showForm ? (
                         <div className="cart__division">
-                            <h3 className="text-black cart__price">$ { product.price }</h3>
+                            <h3 className="text-black font-weight-7 cart__price">$ { product.price }</h3>
                             <form className="align-stretch flex justify-start w-100 cart__content-form">
                                 <input
                                     placeholder="1"
                                     type="number"
-                                    className="cart__content-input text-center border-none outline-none" 
+                                    className="cart__content-input font-weight-7 text-center border-none 
+                                    outline-none" 
                                 />
                                 <button
                                     type="button" 

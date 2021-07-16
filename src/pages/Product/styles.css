@@ -1,19 +1,15 @@
 .features__title {
     font-size: 1.55rem;
-    font-weight: 700;
 }
 
 .features__description {
     font-size: 1.05rem;
     line-height: 1.8rem;
     margin-top: 2rem;
-    opacity: .8;
 }
 
 .product-component {
     margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
 }
 
 .product-component__title {
@@ -27,7 +23,6 @@
 .item {
     font-size: 1.05rem;
     margin-bottom: 1rem;
-    opacity: .9;
 }
 
 .item:last-child {
@@ -36,7 +31,6 @@
 
 .item--highlight {
     color: var(--orange);
-    font-weight: 700;
     margin-right: 22px;
 }
 

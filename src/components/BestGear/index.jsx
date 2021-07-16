@@ -43,13 +43,13 @@ const BestGear = () => {
             </figure>
             <div className="text-center px-5 best-gear__content">
                 <H2
-                    customClass="uppercase best-gear__content-title"
+                    customClass="uppercase font-weight-7 best-gear__content-title"
                     text="Bringing you the"
                 >
                     <em className='best-gear__content-title--highlight'>best</em>
                     audio gear
                 </H2>
-                <p className="best-gear__content-description">
+                <p className="opacity-8 best-gear__content-description">
                     Located at the heart of New York City, Audiophile is the premier store for 
                     high end headphones, earphones, speakers, and audio accessories. We have a 
                     large showroom and luxury demonstration rooms available for you to browse and 

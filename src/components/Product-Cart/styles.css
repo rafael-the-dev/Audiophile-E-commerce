@@ -17,15 +17,9 @@
     transform: translateY(-51px);
 }
 
-.product-cart__name {
-    font-weight: 700;
-}
-
 .product-cart__link {
     font-size: .9rem;
-    font-weight: 600;
     margin-top: 1rem;
-    opacity: .6;
 }
 
 .product-cart__icon {  

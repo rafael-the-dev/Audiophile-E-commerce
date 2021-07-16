@@ -14,22 +14,22 @@ const Footer = () => {
                     <ul className="align-center flex flex-column justify-between footer__list
                         flex-row-sm">
                         <li className="footer__item">
-                            <Link to="/" className="block uppercase text-white footer__link">
+                            <Link to="/" className="block uppercase text-white font-weight-7 footer__link">
                                 Home
                             </Link>
                         </li>
                         <li className="footer__item">
-                            <Link to="./headphones" className="block uppercase text-white footer__link">
+                            <Link to="./headphones" className="block uppercase text-white font-weight-7 footer__link">
                                 Headphones
                             </Link>
                         </li>
                         <li className="footer__item">
-                            <Link to="./speakers" className="block uppercase text-white footer__link">
+                            <Link to="./speakers" className="block uppercase text-white font-weight-7 footer__link">
                                 Speakers
                             </Link>
                         </li>
                         <li className="footer__item">
-                            <Link to="./earphones" className="block uppercase text-white footer__link">
+                            <Link to="./earphones" className="block uppercase text-white font-weight-7 footer__link">
                                 Earphones
                             </Link>
                         </li>
@@ -43,7 +43,7 @@ const Footer = () => {
             </p>
             <div className="align-center flex flex-column justify-center footer__division w-100
                 flex-row-sm justify-between-sm">
-                <p className="text-white footer__copyright">Copyright 2021. All Rights Reserved</p>
+                <p className="text-white opacity-7 footer__copyright">Copyright 2021. All Rights Reserved</p>
                 <div className="align-center flex justify-center footer__social-media">
                     <Link to="/" className="footer__social-media-link">
                         <i className="d-block bg-center no-repeat bg-contain footer__icon footer__icon--facebook"></i>

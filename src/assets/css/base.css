@@ -13,3 +13,35 @@ html {
     min-width: 300px;
 }
 
+
+.font-weight-5 {
+    font-weight: 500;
+}
+
+.font-weight-6 {
+    font-weight: 600;
+}
+
+.font-weight-7 {
+    font-weight: 700;
+}
+
+.font-weight-8 {
+    font-weight: 800;
+}
+
+.opacity-6 {
+    opacity: .6;
+}
+
+.opacity-7 {
+    opacity: .7;
+}
+
+.opacity-8 {
+    opacity: .8;
+}
+
+.opacity-9 {
+    opacity: .9;
+}

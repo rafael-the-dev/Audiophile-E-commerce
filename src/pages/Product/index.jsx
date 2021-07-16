@@ -37,11 +37,11 @@ const Product = () => {
                 <section className="w-100 px-5 px-lg flex flex-column justify-between
                     align-start-md flex-row-md">
                     <div className="features">
-                        <H2 customClass="text-left uppercase features__title" text="features" />
-                        { product && <p className="text-left features__description">{ product.features }</p>}
+                        <H2 customClass="text-left uppercase font-weight-7 features__title" text="features" />
+                        { product && <p className="text-left opacity-8 features__description">{ product.features }</p>}
                     </div> 
 
-                    <div className="px-5 w-100 product-component align-start flex flex-column justify-between
+                    <div className="px-5 py-1-5 w-100 product-component align-start flex flex-column justify-between
                         flex-row-sm flex-column-md">
                         <H2 customClass="text-left uppercase product-component__title" text="In the box" />
                         <ul className="align-start flex flex-column w-100 list">
@@ -49,8 +49,8 @@ const Product = () => {
                                 product.includes && (
                                     product.includes.map((item, index) => {
                                     return (
-                                        <li className="item" key={index}>
-                                                <em className="item--highlight">{ item.quantity }x</em>
+                                        <li className="opacity-9 item" key={index}>
+                                                <em className="font-weight-7 item--highlight">{ item.quantity }x</em>
                                                 { item.item }
                                         </li>
                                     );

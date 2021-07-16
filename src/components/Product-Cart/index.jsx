@@ -12,8 +12,8 @@ const ProductCart = ({ url, image, name }) => {
                     className="d-block height-100 width-100"
                 />
             </figure>
-            <h2 className="uppercase product-cart__name">{ name }</h2>
-            <Link to={ url } className="uppercase decoration-none text-black product-cart__link">
+            <h2 className="uppercase font-weight-7 product-cart__name">{ name }</h2>
+            <Link to={ url } className="uppercase font-weight-6 opacity-6 decoration-none text-black product-cart__link">
                 Shop
                 <i className="fa fas fa-chevron-right product-cart__icon"></i>
             </Link>

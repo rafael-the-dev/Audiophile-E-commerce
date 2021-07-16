@@ -1,7 +1,5 @@
 .cart {
     margin-bottom: 2rem;
-    padding-bottom: 2.5rem;
-    padding-top: 2.5rem;
 }
 
 .cart--nwe-product::before {
@@ -27,7 +25,6 @@
     font-size: .95rem;
     line-height: 1.4rem;
     margin-top: 1.3rem;
-    opacity: .8;
 }
 
 .cart__division {
@@ -36,7 +33,6 @@
 
 .cart__price {
     font-size: 1.2rem;
-    font-weight: 700;
 }
 
 .cart__content-form {
@@ -46,7 +42,6 @@
 .cart__content-input {
     background-color: #F1F1F1;
     font-size: 1.1rem;
-    font-weight: 700;
     padding-bottom: .8rem;
     padding-top: .8rem;
     width: 29%;
