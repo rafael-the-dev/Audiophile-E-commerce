@@ -1,25 +1,24 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
+import ImageHelper from '../../js/helper/ImageHelper';
 import H2 from '../H2';
 import './styles.css';
 
 const BestGear = () => {
     const bestGearRef = useRef(null);
 
-    const getImage = url => {
-        import('../../assets/images/' + url)
-            .then(image => bestGearRef.current.src = image.default)
-            .catch(console.log); 
-    };
+    const bestGearRefHelper = useMemo(() => {
+        return new ImageHelper(bestGearRef)
+    }, [ ]);
 
     const setImage = useCallback(width => {
         if(width >= 992) {
-            getImage('shared/desktop/image-best-gear.jpg');
+            bestGearRefHelper.addImage('shared/desktop/image-best-gear.jpg');
         } else if(width >= 501) {
-            getImage('shared/tablet/image-best-gear.jpg');
+            bestGearRefHelper.addImage('shared/tablet/image-best-gear.jpg');
         } else {
-            getImage('shared/mobile/image-best-gear.jpg');
+            bestGearRefHelper.addImage('shared/mobile/image-best-gear.jpg');
         }
-    }, []);
+    }, [ bestGearRefHelper ]);
 
 
     useEffect(() => {
@@ -33,7 +32,7 @@ const BestGear = () => {
     return (
         <section className="align-center flex flex-column px-5 width-100 px-lg justify-between-md 
             align-stretch-md best-gear">
-            <figure className="w-100 radius-default best-gear__image-container">
+            <figure className="w-100 radius-default  best-gear__image-container">
                 <img
                     ref={bestGearRef}
                     src=""

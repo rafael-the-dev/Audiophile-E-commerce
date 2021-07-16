@@ -3,6 +3,10 @@
     margin-top: 4rem;
 }
 
+.best-gear__image-container {
+    height: 250px;
+}
+
 .best-gear__content {
     padding-left: 2%;
     padding-right: 2%;
@@ -24,6 +28,12 @@
     font-size: .98rem;
     line-height: 1.5rem;
     margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 501px) {
+    .best-gear__image-container {
+        height: 350px;
+    }
 }
 
 @media screen and (min-width: 992px) {  

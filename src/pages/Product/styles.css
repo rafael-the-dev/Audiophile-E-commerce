@@ -46,16 +46,15 @@
 
 
 @media screen and (min-width: 501px) {
-    .product-component__title, .list {
-        width: 47%;
-    }
 
     .product-component__title {
         text-align: center;
+        width: 40%;
     }
 
     .list {
         margin-top: 0;
+        width: 55%;
     }
 
     .gallery {

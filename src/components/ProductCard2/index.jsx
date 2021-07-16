@@ -1,10 +1,12 @@
 import H3 from '../H3';
 import SeeProductLink from '../SeeProductLink';
 import './styles.css';
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import data from '../../data.json';
 
 const ProductCard2 = ({ cart }) => {
     const imageRef = useRef(null);
+    const [ cartLink, setCartLink ] = useState('');
 
     const getImage = url => {
         import('../../assets/images/' + url)
@@ -20,6 +22,11 @@ const ProductCard2 = ({ cart }) => {
         } else {
             getImage(cart.image.mobile)
         }
+    }, [ cart ]);
+
+    useEffect(() => {
+        const result = data.filter(item => item.slug === cart.slug)[0];
+        setCartLink(c => `/${result.category}/${result.id}`);
     }, [ cart ]);
 
     useEffect(() => {
@@ -39,7 +46,7 @@ const ProductCard2 = ({ cart }) => {
                 <img ref={imageRef} src="" alt={ cart.name } className="d-block height-100 w-100" />
             </figure>
             <H3 customClass="product-card__name" text={ cart.name } />
-            <SeeProductLink customClass="product-card__link bg-orange" />
+            <SeeProductLink url={cartLink} customClass="product-card__link bg-orange" />
         </article>
     );
 };

@@ -17,7 +17,8 @@ const Product = () => {
     const [ product, setProduct ] = useState({});
 
     useEffect(() => {
-        const result = data.filter(item => item.id === parseInt(id))
+        const result = data.filter(item => item.id === parseInt(id) || item.slug === id);
+        
         if(result.length > 0) {
             setProduct(p => result[0]);
         }else {

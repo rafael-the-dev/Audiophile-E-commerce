@@ -1,24 +1,23 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
+import ImageHelper from '../../js/helper/ImageHelper';
 import './styles.css';
 
 const ImageCart = ({ galleryImage, customClass }) => {
     const imageRef = useRef(null);
 
-    const getImage = url => {
-        import('../../assets/images/' + url)
-            .then(image => imageRef.current.src = image.default)
-            .catch(console.log); 
-    };
+    const helper = useMemo(() => {
+        return new ImageHelper(imageRef)
+    }, [ ]);
 
     const setImage = useCallback(width => {
         if(width >= 992) {
-            getImage(galleryImage.desktop)
+            helper.addImage(galleryImage.desktop)
         } else if(width >= 501) {
-            getImage(galleryImage.mobile)
+            helper.addImage(galleryImage.mobile)
         } else {
-            getImage(galleryImage.mobile)
+            helper.addImage(galleryImage.mobile)
         }
-    }, [ galleryImage ]);
+    }, [ helper, galleryImage ]);
 
     useEffect(() => {
         setImage(window.innerWidth); 
