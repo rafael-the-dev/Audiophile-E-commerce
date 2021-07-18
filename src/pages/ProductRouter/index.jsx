@@ -10,11 +10,14 @@ import ProductsList from '../../components/ProductsList';
 
 import './styles.css';
 import ImageCart from '../../components/ImageCart';
+import { useRef } from 'react';
+import CurrentPage from '../../js/models/CurrentPage';
 
 const Product = () => {
     const { id } = useParams();
     const history = useHistory();
     const [ product, setProduct ] = useState({});
+    const productRouteRef = useRef(null);
 
     useEffect(() => {
         const result = data.filter(item => item.id === parseInt(id) || item.slug === id);
@@ -27,8 +30,12 @@ const Product = () => {
         
     }, [ id, history ]);
 
+    useEffect(() => {
+        CurrentPage.page = productRouteRef.current;
+    }, [  ]);
+
     return (
-        <>
+        <div ref={productRouteRef}>
             <main>
                 <section className="px-5">
                     { 
@@ -89,7 +96,7 @@ const Product = () => {
                         flex-row-sm ">
                         {
                             product.others && (
-                                product.others.map((item, index) => <ProductCard2 cart={item} />)
+                                product.others.map((item, index) => <ProductCard2 key={index} cart={item} />)
                             )
                         }
                     </div>
@@ -99,7 +106,7 @@ const Product = () => {
                 <BestGear />
             </main>
             <Footer />
-        </>
+        </div>
     );
 };
 

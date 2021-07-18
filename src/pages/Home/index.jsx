@@ -7,10 +7,12 @@ import Footer from '../../components/Footer';
 import ProductsList from '../../components/ProductsList';
 import BestGear from '../../components/BestGear';
 import ImageHelper from '../../js/helper/ImageHelper';
+import CurrentPage from '../../js/models/CurrentPage';
 
 const Home = () => {
     const earphoneRef = useRef(null);
     const zx9SpeakerRef = useRef(null);
+    const homeRef = useRef(null);
 
     const earphoneRefHelper = useMemo(() => {
         return new ImageHelper(earphoneRef)
@@ -40,8 +42,13 @@ const Home = () => {
             setImage(event.target.innerWidth);
         });
     }, [ setImage ]);
+
+    useEffect(() => {
+        CurrentPage.page = homeRef.current;
+    }, [  ]);
+
     return (
-        <>
+        <div ref={homeRef}>
             <main>
                 <section className="align-center flex flex-column justify-center bg-center no-repeat bg-cover
                     align-start-desktop px-tablet px-lg width-100 hero">
@@ -104,7 +111,7 @@ const Home = () => {
                 <BestGear />
             </main>
             <Footer />
-        </>
+        </div>
     );
 };
 

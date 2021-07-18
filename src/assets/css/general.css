@@ -34,6 +34,10 @@
     display: block;
 }
 
+.bg-transparent {
+    background-color: transparent !important;
+}
+
 .bg-orange {
     background-color: var(--orange);
 }
@@ -72,6 +76,10 @@
 
 .flex {
     display: flex;
+}
+
+.h-100 {
+    height: 100%;
 }
 
 .justify-between {
@@ -164,6 +172,10 @@
 
 .text-center {
     text-align: center;
+}
+
+.text-orange {
+    color: var(--orange);
 }
 
 .text-black {

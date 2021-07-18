@@ -6,11 +6,14 @@ import { useHistory, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import data from '../../data.json';
 import Cart from "../../components/Cart";
+import CurrentPage from '../../js/models/CurrentPage';
+import { useRef } from 'react';
 
 const Categories = () => {
     const { category } = useParams();
     const history = useHistory();
     const [ productsList, setProductsList ] = useState([]);
+    const categoriesRef = useRef(null);
 
     useEffect(() => {
         if(!['headphones', 'speakers', 'earphones'].includes(category)) {
@@ -22,8 +25,12 @@ const Categories = () => {
         console.log()
     }, [ category, history ]);
 
+    useEffect(() => {
+        CurrentPage.page = categoriesRef.current;
+    }, [  ]);
+
     return (
-        <>
+        <div ref={categoriesRef}>
             <CategoriesPanel text={ category } />
             <main>
                 <section className="px-5">
@@ -35,7 +42,7 @@ const Categories = () => {
                 <BestGear />
             </main>
             <Footer/>
-        </>
+        </div>
     );
  };
 

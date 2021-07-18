@@ -1,0 +1,40 @@
+.cart-item {
+    margin-bottom: 15px;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+}
+
+.cart-item:last-child{
+    margin-bottom: 0;
+}
+
+.cart-item__image-container {
+    height: 60px;
+    width: 25%;
+}
+
+.cart-item__name {
+    margin-bottom: 6px;
+}
+
+.cart-item__form {
+    background-color: #F1F1F1;
+    padding: .1rem .2rem;
+    width: 36%;
+}
+
+.cart-item__decrement, .cart-item__increment {
+    width: 35%;
+}
+
+.cart-item__input {
+    font-size: 1.1rem;
+    height: 30px;
+    width: 60%;
+}
+
+@media screen and (min-width: 501px) {
+    .cart-item {
+        margin-bottom: 6px;
+    }
+}

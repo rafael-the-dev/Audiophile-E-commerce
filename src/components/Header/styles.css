@@ -14,6 +14,13 @@
     text-decoration: none;
 }
 
+.cart-itens {
+    border-radius: 50%;
+    font-size: .9rem;
+    padding: 1px 4px;
+    vertical-align: super;
+}
+
 @media screen and (min-width: 501px) {
     .header__division-2 {
         width: 30%;
