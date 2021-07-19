@@ -30,7 +30,7 @@ const BestGear = () => {
     }, [ setImage ]);
 
     return (
-        <section className="align-center flex flex-column px-5 width-100 px-lg justify-between-md 
+        <section className="align-center flex flex-column px-5 width-100 px-lg px-xl justify-between-md 
             align-stretch-md best-gear">
             <figure className="w-100 radius-default  best-gear__image-container">
                 <img

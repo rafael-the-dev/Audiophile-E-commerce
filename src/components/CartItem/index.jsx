@@ -6,7 +6,7 @@ import { removeItem, updateItem } from '../../js/store/actions';
 import H3 from '../H3';
 import './styles.css';
 
-const CartItem = ({ cartItem }) => {
+const CartItem = ({ cartItem, isSummaryItem, customClass }) => {
     const imageRef = useRef(null);
     const inputRef = useRef(null);
     const [ isInValidQuantity, setIsInValidQuantity ] = useState(false);
@@ -63,34 +63,40 @@ const CartItem = ({ cartItem }) => {
     };
 
     return (
-        <article className="align-center flex justify-between w-100 cart-item">
-            <figure className="cart-item__image-container">
+        <article className="align-center flex justify-start w-100 cart-item">
+            <figure className={`cart-item__image-container ${customClass}`}>
                 <img src="" ref={imageRef} className="d-block h-100 w-100" alt=""/>
             </figure>
-            <div className="">
+            <div className="cart-item__content">
                 <H3 customClass="cart-item__name" text={ cartItem.product.slug.replace(/(-[a-z]+)+/i, "") } />
-                <p  className="cart-item__price">$ { cartItem.product.price }/{value}</p>
+                <p  className="cart-item__price">$ { cartItem.product.price }</p>
             </div>
-            <form
-                onSubmit={e => e.preventDefault()} 
-                className="align-center flex justify-between w-100 cart-item__form">
-                <button
-                    type="button"
-                    className="border-none outline-none bg-transparent cart-item__decrement" 
-                    onClick={decrementButtonHandler}>-</button>
-                <input
-                    type="number"
-                    min="0"
-                    value={value}
-                    ref={inputRef}
-                    className="border-none font-weight-7 text-center outline-none bg-transparent cart-item__input" 
-                    onChange={onChangeHandler}
-                />
-                <button 
-                    type="button"
-                    className="border-none outline-none bg-transparent cart-item__increment" 
-                    onClick={incrementButtonHandler}>+</button>
-            </form>
+            {
+                isSummaryItem ? 
+                    (<div className="flex justify-end cart-item__quantity"><p>x{ cartItem.quantity }</p></div>) : 
+                    (
+                        <form
+                            onSubmit={e => e.preventDefault()} 
+                            className="align-center flex justify-between w-100 cart-item__form">
+                            <button
+                                type="button"
+                                className="border-none outline-none bg-transparent cart-item__decrement" 
+                                onClick={decrementButtonHandler}>-</button>
+                            <input
+                                type="number"
+                                min="0"
+                                value={value}
+                                ref={inputRef}
+                                className="border-none font-weight-7 text-center outline-none bg-transparent cart-item__input" 
+                                onChange={onChangeHandler}
+                            />
+                            <button 
+                                type="button"
+                                className="border-none outline-none bg-transparent cart-item__increment" 
+                                onClick={incrementButtonHandler}>+</button>
+                        </form>
+                    )
+            }
         </article>
     );
 }; 

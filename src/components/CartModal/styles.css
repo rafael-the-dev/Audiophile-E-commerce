@@ -1,5 +1,6 @@
 .cart-modal {
     background: #fff;
+    box-shadow: 0 6px 16px #ccc;
     left: 5%;
     right: 5%;
     transition: display 4s ease-in-out;
@@ -34,24 +35,24 @@
 
 @media screen and (min-width: 501px) {
     .cart-modal {
-        left: 48%;
-        right: 2%;
+        left: 45%;
+        right: 5%;
         width: 50%;
     }
 }
 
 @media screen and (min-width: 992px) {
     .cart-modal {
-        left: 58%;
-        right: 2%;
+        left: 55%;
+        right: 5%;
         width: 40%;
     }
 }
 
 @media screen and (min-width: 1220px) {
     .cart-modal {
-        left: 68%;
-        right: 2%;
+        left: 65%;
+        right: 5%;
         width: 30%;
     }
 }

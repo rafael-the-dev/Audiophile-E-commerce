@@ -1,0 +1,31 @@
+.checkout-main {
+    background-color: #F1F1F1;
+}
+
+.billing {
+    background-color: #FFF;
+}
+
+.billing__fieldset {
+    margin-top: 2rem;
+}
+
+.shipping__fieldset {
+    margin-top: 1rem;
+}
+
+.summary {
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+    .billing {
+        width: 60%;
+    }
+
+    .summary {
+        margin-top: 0;
+        width: 38%;
+    }
+    
+}

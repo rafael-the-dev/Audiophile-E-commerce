@@ -1,0 +1,8 @@
+.summary-item {
+    font-size: 1.02rem;
+    margin-bottom: 1.2rem;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+}

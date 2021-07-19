@@ -52,7 +52,7 @@ const Cart = ({ product, showForm }) => {
     };
 
     return (
-        <article className={`px-lg py-2-5 flex flex-column justify-between w-100
+        <article className={`px-lg px-xl py-2-5 flex flex-column justify-between w-100
             radius-default cart ${showForm ? 'align-start' : 'align-center'}`}>
             <figure className="w-100 radius-default cart__image">
                 <img

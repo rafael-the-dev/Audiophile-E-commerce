@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CartModel from '../../js/models/CartModel';
 import { removeAll } from '../../js/store/actions';
 import { selectCart } from '../../js/store/selectors';
@@ -37,10 +38,10 @@ const CartModal = ({ modalRef }) => {
                     <span>Total</span>
                     <span className="font-weight-7">$ { cartModel.totalPrice() }</span>
                 </h3>
-                <button className="border-none outline-none uppercase  bg-orange text-white 
+                <Link to="/checkout" className="text-center decoration-none uppercase  bg-orange text-white 
                     w-100 py-1 cart-modal__checkout">
                     checkout
-                </button>
+                </Link>
             </footer>
         </div>
     );

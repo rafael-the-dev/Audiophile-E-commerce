@@ -141,7 +141,7 @@
 
 @media screen and (min-width: 1220px) {
     .footer__bar {
-        left: 15%;
+        left: 10%;
         width: 7%;
     }
 
@@ -149,5 +149,11 @@
         font-size: .85rem;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 1420px) {
+    .footer__bar {
+        left: 15%;
     }
 }

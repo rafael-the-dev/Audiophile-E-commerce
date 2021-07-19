@@ -11,13 +11,15 @@ import ProductsList from '../../components/ProductsList';
 import './styles.css';
 import ImageCart from '../../components/ImageCart';
 import { useRef } from 'react';
-import CurrentPage from '../../js/models/CurrentPage';
+import Header from '../../components/Header';
+import CartModal from '../../components/CartModal';
 
 const Product = () => {
     const { id } = useParams();
     const history = useHistory();
     const [ product, setProduct ] = useState({});
     const productRouteRef = useRef(null);
+    const modalRef = useRef(null);
 
     useEffect(() => {
         const result = data.filter(item => item.id === parseInt(id) || item.slug === id);
@@ -30,19 +32,17 @@ const Product = () => {
         
     }, [ id, history ]);
 
-    useEffect(() => {
-        CurrentPage.page = productRouteRef.current;
-    }, [  ]);
-
     return (
-        <div ref={productRouteRef}>
+        <>
+            <Header modalRef={modalRef} currentPage={productRouteRef}/>
+            <div ref={productRouteRef} >
             <main>
                 <section className="px-5">
                     { 
                         product.image && <Cart customClass="product-cart" product={product} showForm />
                     } 
                 </section>
-                <section className="w-100 px-5 px-lg flex flex-column justify-between
+                <section className="w-100 px-5 px-lg px-xl flex flex-column justify-between
                     align-start-md flex-row-md">
                     <div className="features">
                         <H2 customClass="text-left uppercase font-weight-7 features__title" text="features" />
@@ -69,7 +69,7 @@ const Product = () => {
                     </div>
                 </section>
 
-                <section className="gallery w-100 px-5 px-lg align-stretch flex flex-column ">
+                <section className="gallery w-100 px-5 px-lg px-xl align-stretch flex flex-column ">
                     {
                         product.gallery && (
                             <>
@@ -90,7 +90,7 @@ const Product = () => {
                     }
                 </section>
 
-                <section className="px-5 px-lg align-center flex flex-column justify-between others-products">
+                <section className="px-5 px-lg px-xl align-center flex flex-column justify-between others-products">
                     <H2 customClass="others-products__title uppercase" text="You may also like"/>
                     <div className="align-stretch flex flex-column justify-between w-100 others-products__content
                         flex-row-sm ">
@@ -107,6 +107,8 @@ const Product = () => {
             </main>
             <Footer />
         </div>
+        <CartModal modalRef={modalRef} /> 
+        </>
     );
 };
 

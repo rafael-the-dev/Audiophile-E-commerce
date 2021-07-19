@@ -7,12 +7,14 @@ import Footer from '../../components/Footer';
 import ProductsList from '../../components/ProductsList';
 import BestGear from '../../components/BestGear';
 import ImageHelper from '../../js/helper/ImageHelper';
-import CurrentPage from '../../js/models/CurrentPage';
+import CartModal from '../../components/CartModal';
+import Header from '../../components/Header';
 
 const Home = () => {
     const earphoneRef = useRef(null);
     const zx9SpeakerRef = useRef(null);
     const homeRef = useRef(null);
+    const modalRef = useRef(null);
 
     const earphoneRefHelper = useMemo(() => {
         return new ImageHelper(earphoneRef)
@@ -43,15 +45,13 @@ const Home = () => {
         });
     }, [ setImage ]);
 
-    useEffect(() => {
-        CurrentPage.page = homeRef.current;
-    }, [  ]);
-
     return (
+        <>
+        <Header modalRef={modalRef} currentPage={homeRef}/>
         <div ref={homeRef}>
             <main>
                 <section className="align-center flex flex-column justify-center bg-center no-repeat bg-cover
-                    align-start-desktop px-tablet px-lg width-100 hero">
+                    align-start-desktop px-tablet px-lg px-xl width-100 hero">
                     <div className="align-center flex flex-column justify-center text-center text-white 
                         align-start-desktop width-100 px-5 hero__division">
                         <H1 customClass="hero__title font-weight-7" text="XX99 Mark II"><br/>HeadphoneS</H1>
@@ -63,7 +63,7 @@ const Home = () => {
                     </div>
                 </section>
                 <ProductsList />
-                <section className="px-5 px-lg">
+                <section className="px-5 px-lg px-xl">
                     <div className="align-center flex flex-column justify-between px-5 w-100
                         radius-default py-2-5 bg-orange product-section">
                         <figure className="w-100 product-section__image-container">
@@ -85,14 +85,14 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section className="px-5 px-lg">
+                <section className="px-5 px-lg px-xl">
                     <div className="align-start flex justify-center flex-column bg-center no-repeat
                         bg-cover w-100 px-5 radius-default speaker-section">
                         <H2 customClass="speaker-section__title font-weight-7" text="ZX7 SPEAKER" />
                         <SeeProductLink url="./speakers/5" customClass="text-black secondary" />
                     </div>
                 </section>
-                <section className="px-5 px-lg align-stretch-sm d-flex-sm flex-row-sm justify-center-sm
+                <section className="px-5 px-lg px-xl align-stretch-sm d-flex-sm flex-row-sm justify-center-sm
                     earphones-section">
                     <figure className="w-100 radius-default earphones-section__image-container">
                         <img
@@ -112,6 +112,8 @@ const Home = () => {
             </main>
             <Footer />
         </div>
+        <CartModal modalRef={modalRef} /> 
+        </>
     );
 };
 

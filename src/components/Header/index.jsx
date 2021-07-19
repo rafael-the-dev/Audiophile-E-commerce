@@ -6,12 +6,11 @@ import { selectCart } from '../../js/store/selectors';
 import { useDispatch } from 'react-redux';
 import { getLocalStorageData } from '../../js/store/actions';
 import { useEffect, useMemo } from 'react';
-import CurrentPage from '../../js/models/CurrentPage.js';
 import CartModel from '../../js/models/CartModel';
 
-const Header = ({ modalRef }) => {
+const Header = ({ modalRef, currentPage }) => {
     const cart = useSelector(selectCart);
-    
+    console.log(currentPage)
     const dispatch = useDispatch();
 
     const cartModel = useMemo(() => {
@@ -24,15 +23,15 @@ const Header = ({ modalRef }) => {
 
     const clickHandler = () => {
         modalRef.current.classList.toggle('cart-modal--toggle');
-        CurrentPage.page.classList.toggle('modal-opened');
-        CurrentPage.page.addEventListener('click', event => {
+        currentPage.current.classList.toggle('modal-opened');
+        currentPage.current.addEventListener('click', event => {
             modalRef.current.classList.remove('cart-modal--toggle');
-            CurrentPage.page.classList.remove('modal-opened');
+            currentPage.current.classList.remove('modal-opened');
         })
     };
 
     return (
-        <header id="header" className="flex px-5 width-100 px-lg header">
+        <header id="header" className="flex px-5 width-100 px-lg px-xl header">
             <div className="align-center flex justify-between width-100 header__division">
                 <div className="align-center flex justify-start header__division-2">
                     <button

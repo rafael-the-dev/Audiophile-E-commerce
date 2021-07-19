@@ -4,7 +4,7 @@ import './styles.css';
 
 const Footer = () => {
     return (
-        <footer className="align-center flex flex-column relative justify-between px-5 px-lg footer
+        <footer className="align-center flex flex-column relative justify-between px-5 px-lg px-xl footer
         align-start-sm">
             <div className="absolute footer__bar"></div>
             <div className="align-center flex flex-column justify-between w-100

@@ -38,6 +38,10 @@
     background-color: transparent !important;
 }
 
+.bg-white {
+    background-color: #FFF;
+}
+
 .bg-orange {
     background-color: var(--orange);
 }

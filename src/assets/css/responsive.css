@@ -106,6 +106,13 @@
 
 @media screen and (min-width: 1220px) {
     .px-lg {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (min-width: 1420px) {
+    .px-xl {
         padding-left: 15%;
         padding-right: 15%;
     }
