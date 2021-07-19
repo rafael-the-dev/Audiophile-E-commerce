@@ -56,3 +56,10 @@
         width: 30%;
     }
 }
+
+@media screen and (min-width: 1420px) {
+    .cart-modal {
+        left: 55%;
+        right: 15%;
+    }
+}
