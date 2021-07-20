@@ -31,7 +31,7 @@ const Checkout = () => {
     const warningRef = useRef(null);
 
     const [ name, setName ] = useState("");
-    const [ isInValidName, setIsInvalidName ] = useState(false);
+    const [ isInValidName, setIsInvalidName ] = useState(true);
 
     const [ email, setEmail ] = useState("");
     const [ isInValidEmail, setIsInvalidEmail ] = useState(false);
@@ -51,6 +51,12 @@ const Checkout = () => {
     const [ country, setCountry ] = useState("");
     const [ isInValidCountry, setIsInvalidCountry ] = useState(false);
 
+    const [ emoneyNumber, setEmoneyNumber ] = useState("");
+    const [ isInvalidmoneyNumber, setIsInvalidEmoneyNumber ] = useState(false);
+
+    const [ emoneyPin, setEmoneyPin ] = useState("");
+    const [ isInvalidEmoneyPin, setIsInvalidEmoneyPin ] = useState(false);
+
     const [ paymentMethod, setPaymentMethod ] = useState("e-money");
     const [ shipping, setShipping ] = useState(50);
 
@@ -67,7 +73,7 @@ const Checkout = () => {
 
         [isInValidName, isInValidEmail, isInValidPhoneNumber, isInValidAddress,
             isInValidZipCode, isInValidCity, isInValidCountry].forEach(item => {
-            if(!item) {
+            if(item) {
                 validForm = false;
             }
         });
@@ -122,6 +128,8 @@ const Checkout = () => {
             
             setPaymentMethod(p => 'on-delivery');
             setShipping(s => 0);
+            setIsInvalidEmoneyNumber(e => false);
+            setIsInvalidEmoneyPin(e => false);
         }
     };
 
@@ -220,7 +228,7 @@ const Checkout = () => {
                                     <TextField
                                         type="number" 
                                         placeholder="10001"
-                                        pattern="\d{5}" 
+                                        pattern="\d{4,5}" 
                                         required
                                         setValue={setZipCode}
                                         setIsValidInput={setIsInvalidZipCode}
@@ -326,8 +334,8 @@ const Checkout = () => {
                                                 placeholder="10001"
                                                 pattern="\d{9}" 
                                                 required
-                                                setValue={setZipCode}
-                                                setIsValidInput={setIsInvalidZipCode}
+                                                setValue={setEmoneyNumber}
+                                                setIsValidInput={setIsInvalidEmoneyNumber}
                                             />
                                             <Label 
                                                 label="Invalid e-Money Number" 
@@ -341,8 +349,8 @@ const Checkout = () => {
                                                 placeholder="10001"
                                                 pattern="\d{4}" 
                                                 required
-                                                setValue={setZipCode}
-                                                setIsValidInput={setIsInvalidZipCode}
+                                                setValue={setEmoneyPin}
+                                                setIsValidInput={setIsInvalidEmoneyPin}
                                             />
                                             <Label 
                                                 label="Invalid e-Money PIN" 
