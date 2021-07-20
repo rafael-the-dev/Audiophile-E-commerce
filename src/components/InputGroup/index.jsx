@@ -1,8 +1,8 @@
 import './styles.css';
 
-const InputGroup = ({ children }) => {
+const InputGroup = ({ children, customClass }) => {
     return (
-        <div className="align-start flex flex-column w-100 input-group">
+        <div className={`align-start flex flex-column w-100 input-group ${customClass}`}>
             {children}
         </div>
     );

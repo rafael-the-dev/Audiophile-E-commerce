@@ -8,12 +8,15 @@ import data from '../../data.json';
 import Cart from "../../components/Cart";
 import CurrentPage from '../../js/models/CurrentPage';
 import { useRef } from 'react';
+import Header from "../../components/Header";
+import CartModal from "../../components/CartModal";
 
 const Categories = () => {
     const { category } = useParams();
     const history = useHistory();
     const [ productsList, setProductsList ] = useState([]);
     const categoriesRef = useRef(null);
+    const modalRef = useRef(null);
 
     useEffect(() => {
         if(!['headphones', 'speakers', 'earphones'].includes(category)) {
@@ -25,24 +28,24 @@ const Categories = () => {
         console.log()
     }, [ category, history ]);
 
-    useEffect(() => {
-        CurrentPage.page = categoriesRef.current;
-    }, [  ]);
-
     return (
-        <div ref={categoriesRef}>
-            <CategoriesPanel text={ category } />
-            <main>
-                <section className="px-5">
-                    {
-                        productsList.map(product => <Cart key={product.slug} product={product} />)
-                    }
-                </section>
-                <ProductsList />
-                <BestGear />
-            </main>
-            <Footer/>
-        </div>
+        <>
+            <Header modalRef={modalRef} currentPage={categoriesRef}/>
+            <div ref={categoriesRef}>
+                <CategoriesPanel text={ category } />
+                <main>
+                    <section className="px-5">
+                        {
+                            productsList.map(product => <Cart key={product.slug} product={product} />)
+                        }
+                    </section>
+                    <ProductsList />
+                    <BestGear />
+                </main>
+                <Footer/>
+            </div>
+            <CartModal modalRef={modalRef} /> 
+        </>
     );
  };
 

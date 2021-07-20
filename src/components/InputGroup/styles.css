@@ -14,4 +14,9 @@
     .input-group:last-child {
         margin-bottom: 18px;
     }
+
+    .address-field {
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
 }

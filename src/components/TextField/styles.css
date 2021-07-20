@@ -1,5 +1,5 @@
 .default-input {
-    border-color: #F1F1F1;
-    margin-top: 11px;
-    padding: .6rem .5rem;
+    border: 2px solid #F1F1F1;
+    margin: 11px 0 5px 0;
+    padding: .8rem .7rem;
 }

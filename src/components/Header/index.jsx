@@ -10,7 +10,6 @@ import CartModel from '../../js/models/CartModel';
 
 const Header = ({ modalRef, currentPage }) => {
     const cart = useSelector(selectCart);
-    console.log(currentPage)
     const dispatch = useDispatch();
 
     const cartModel = useMemo(() => {

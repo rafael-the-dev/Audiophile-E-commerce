@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import CartModel from '../../js/models/CartModel';
 import { removeAll } from '../../js/store/actions';
 import { selectCart } from '../../js/store/selectors';
@@ -16,6 +16,16 @@ const CartModal = ({ modalRef }) => {
     }, [ cart ]);
 
     const dispatch = useDispatch();
+
+    const history = useHistory();
+
+    const clickHandler = () => {
+        if(cartModel.totalItens() < 1) {
+            return ;
+        }
+
+        history.push('/checkout');
+    };
 
     return (
         <div role="dialog" ref={modalRef} className="align-stretch radius-default py-2 px-5 d-none flex-column
@@ -38,10 +48,10 @@ const CartModal = ({ modalRef }) => {
                     <span>Total</span>
                     <span className="font-weight-7">$ { cartModel.totalPrice() }</span>
                 </h3>
-                <Link to="/checkout" className="text-center decoration-none uppercase  bg-orange text-white 
-                    w-100 py-1 cart-modal__checkout">
+                <button onClick={clickHandler} className="text-center decoration-none uppercase  bg-orange text-white 
+                    outline-none border-none w-100 py-1 cart-modal__checkout">
                     checkout
-                </Link>
+                </button>
             </footer>
         </div>
     );

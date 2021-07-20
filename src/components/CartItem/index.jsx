@@ -68,7 +68,7 @@ const CartItem = ({ cartItem, isSummaryItem, customClass }) => {
                 <img src="" ref={imageRef} className="d-block h-100 w-100" alt=""/>
             </figure>
             <div className="cart-item__content">
-                <H3 customClass="cart-item__name" text={ cartItem.product.slug.replace(/(-[a-z]+)+/i, "") } />
+                <H3 customClass="uppercase cart-item__name" text={ cartItem.product.slug.replace(/(-[a-z]+)+/i, "") } />
                 <p  className="cart-item__price">$ { cartItem.product.price }</p>
             </div>
             {

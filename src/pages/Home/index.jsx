@@ -47,8 +47,8 @@ const Home = () => {
 
     return (
         <>
-        <Header modalRef={modalRef} currentPage={homeRef}/>
-        <div ref={homeRef}>
+            <Header modalRef={modalRef} currentPage={homeRef}/>
+            <div ref={homeRef}>
             <main>
                 <section className="align-center flex flex-column justify-center bg-center no-repeat bg-cover
                     align-start-desktop px-tablet px-lg px-xl width-100 hero">
@@ -112,7 +112,7 @@ const Home = () => {
             </main>
             <Footer />
         </div>
-        <CartModal modalRef={modalRef} /> 
+            <CartModal modalRef={modalRef} /> 
         </>
     );
 };

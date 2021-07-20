@@ -19,7 +19,8 @@
 }
 
 .cart-item__name {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
+    font-size: 1.2rem;
 }
 
 .cart-item__form {
