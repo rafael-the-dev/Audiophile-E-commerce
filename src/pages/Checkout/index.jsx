@@ -72,7 +72,8 @@ const Checkout = () => {
         let validForm = true;
 
         [isInValidName, isInValidEmail, isInValidPhoneNumber, isInValidAddress,
-            isInValidZipCode, isInValidCity, isInValidCountry].forEach(item => {
+            isInValidZipCode, isInValidCity, isInValidCountry, isInvalidEmoneyPin,
+            isInvalidmoneyNumber].forEach(item => {
             if(item) {
                 validForm = false;
             }
@@ -87,7 +88,8 @@ const Checkout = () => {
             checkoutDialogRef.current.focus();
             checkoutRef.current.classList.toggle('modal-opened');
             setCanISumbmit(c => true);
-            const form = { name, city, country, zipCode, phoneNumber, email, address, paymentMethod }
+            const form = { name, city, country, zipCode, phoneNumber, email, address, paymentMethod,
+                emoneyPin, emoneyNumber }
 
             checkoutRef.current.addEventListener('click', event => {
                 checkoutDialogRef.current.classList.remove('cart-modal--toggle');
