@@ -6,7 +6,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import data from '../../data.json';
 import Cart from "../../components/Cart";
-import CurrentPage from '../../js/models/CurrentPage';
+//import CurrentPage from '../../js/models/CurrentPage';
 import { useRef } from 'react';
 import Header from "../../components/Header";
 import CartModal from "../../components/CartModal";

@@ -89,7 +89,8 @@ const Checkout = () => {
             checkoutRef.current.classList.toggle('modal-opened');
             setCanISumbmit(c => true);
             const form = { name, city, country, zipCode, phoneNumber, email, address, paymentMethod,
-                emoneyPin, emoneyNumber }
+                emoneyPin, emoneyNumber };
+                console.log(form);
 
             checkoutRef.current.addEventListener('click', event => {
                 checkoutDialogRef.current.classList.remove('cart-modal--toggle');
