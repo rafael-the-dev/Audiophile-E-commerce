@@ -8,6 +8,14 @@
     padding-top: .8rem;
 }
 
+.header__itens {
+    margin-bottom: 4px;
+}
+
+.header__itens:last-child {
+    margin-bottom: 0;
+}
+
 .header__link {
     font-size: .8rem;
     padding: .4rem .9rem;
@@ -24,6 +32,15 @@
     width: 20px;
 }
 
+.header__navigation--toggle {
+    background: #000;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+}
+
 @media screen and (min-width: 501px) {
     .header__division-2 {
         width: 30%;
@@ -33,6 +50,24 @@
 @media screen and (min-width: 992px) {
     .header__division-2 {
         width: 14%;
+    }
+
+    .header__list {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .header__itens {
+        margin-bottom: 0;
+    }
+
+    .header__navigation--toggle {
+        background: transparent;
+        display: inline-block;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: auto;
     }
 }
 
